@@ -1,3 +1,30 @@
+function returnArr(num) {
+  let numArr = [];
+  for (i = 0; i<= num; i++){
+    numArr.push(i);
+  }
+}
+
+function input(num) {
+  let arr = returnArr(num);
+  let inputArr = arr.map(function(element) {
+    if(element.toString().includes("1")) {
+      return "beep";
+    } else if (element.toString().includes("2")) {
+      return "boop"
+    } else if (element.toString().includes("3")) {
+      return "Won't you be my neighbor?";
+    } else {
+      return element;
+    }
+    })
+    return inputArr;
+  }
+
+
+
+
+
 function hideResults () {
   document.getElementById("story").setAttribute("class" , "hidden");
   document.getElementById("reset").setAttribute("class" , "hidden");
@@ -14,10 +41,6 @@ function handleRadio(event) {
   document.getElementById("results").removeAttribute("class", "hidden");
 
 
-let result;
-if
-
-
 
 
 
@@ -26,4 +49,5 @@ window.addEventListener("load", function() {
   form.addEventListener("submit", handleRadio);
   const reset = document.getElementById("reset")
   reset.addEventListener("click", hideResults);
-});
+})
+};

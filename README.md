@@ -36,5 +36,5 @@ _{This page is a form that will translate numbers into sentences from Mr Roboger
 
 _{MIT}_
 
-Copyright (c) _11/05/2022_ _Tyler Quinn_
+Copyright (c) _11/19/2022_ _Tyler Quinn_
 

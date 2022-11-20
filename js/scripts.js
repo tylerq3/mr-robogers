@@ -1,23 +1,18 @@
-function returnArr(num) {
-  let numArr = [];
-  for (i = 0; i<= num; i++){
-    numArr.push(i);
-  }
-}
-
 function input(num) {
-  let arr = returnArr(num);
-  let inputArr = arr.map(function(element) {
-    if(element.toString().includes("1")) {
-      return "beep";
-    } else if (element.toString().includes("2")) {
-      return "boop"
-    } else if (element.toString().includes("3")) {
-      return "Won't you be my neighbor?";
+  let inputNum= parseInt(num);
+  let outputNum = inputNum + 1;
+  let inputArr = [];
+  for (let i= 0; outputNum + 1; i++) {
+    if(num.toString().includes("1")) {
+      return inputArr.push("beep");
+    } else if (num.toString().includes("2")) {
+      return inputArr.push("boop");
+    } else if (num.toString().includes("3")) {
+      return inputArr.push("Won't you be my neighbor?");
     } else {
-      return element;
+      return num;
     }
-    })
+    }
     return inputArr;
   }
 
@@ -32,8 +27,6 @@ function hideResults () {
 }
 function handleForm(event) {
   event.preventDefault();
-  let inputNum = parseInt(inputNum.value);
-
   document.getElementById("robo-form").setAttribute("class" , "hidden");
   document.getElementById("story").removeAttribute("class" , "hidden");
   document.getElementById("reset").removeAttribute("class" , "hidden");

@@ -30,24 +30,28 @@ function hideResults () {
   document.getElementById("reset").setAttribute("class" , "hidden");
   document.getElementById("results").setAttribute("class" , "hidden");
 }
-function handleRadio(event) {
+function handleForm(event) {
   event.preventDefault();
-  const inputNum = document.getElementById("inputNum").value;
-  const num1 =  numbers['1'] = 'Beep';
-  const num2 = numbers['2'] = 'Boop';
-  const num3 = numbers['3'] = 'Wont you be my neighbor?';
+  let inputNum = parseInt(inputNum.value);
+
   document.getElementById("robo-form").setAttribute("class" , "hidden");
-  document.getElementById("reset").removeAttribute("class", "hidden");
-  document.getElementById("results").removeAttribute("class", "hidden");
+  document.getElementById("story").removeAttribute("class" , "hidden");
+  document.getElementById("reset").removeAttribute("class" , "hidden");
+  document.getElementById("results").removeAttribute("class" , "hidden");
+
+
+   
+  }
+
+  
 
 
 
 
-
-window.addEventListener("load", function() {
-  const form = document.getElementById("robo-form");
-  form.addEventListener("submit", handleRadio);
-  const reset = document.getElementById("reset")
-  reset.addEventListener("click", hideResults);
-})
+  window.addEventListener("load", function() {
+    const form = document.getElementById("robo-form");
+    form.addEventListener("submit", handleForm);
+    const reset = document.getElementById("reset")
+    reset.addEventListener("click", hideResults);
+  })  
 };

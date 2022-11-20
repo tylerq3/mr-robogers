@@ -18,10 +18,12 @@ function hideResults () {
   document.getElementById("story").setAttribute("class" , "hidden");
   document.getElementById("reset").setAttribute("class" , "hidden");
   document.getElementById("results").setAttribute("class" , "hidden");
+  document.getElementById("robo-form").removeAttribute("class", "hidden");
+  document.getElementById("inputNum").value = null;
 }
 function handleForm(event) {
   event.preventDefault();
-  
+  document.querySelector("input#inputNum");
   document.getElementById("story").setAttribute("class" , "hidden");
   document.getElementById("reset").setAttribute("class" , "hidden");
   document.getElementById("results").setAttribute("class" , "hidden");
@@ -30,7 +32,7 @@ function handleForm(event) {
 
 window.addEventListener("load", function() {
   const form = document.getElementById("robo-form");
-  form.addEventListener("click", handleForm);
+  form.addEventListener("submit", handleForm);
   const reset = document.getElementById("reset")
   reset.addEventListener("click", hideResults);
 });

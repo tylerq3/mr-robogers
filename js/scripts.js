@@ -2,11 +2,11 @@ function input(num) {
   let inputArr = [];
   for (let i= 0; i <= num; i++) {
     if(i.toString().includes("1")) {
-      inputArr.push("beep");
+      inputArr.push(" beep ");
     } else if (i.toString().includes("2")) {
-      inputArr.push("boop");
+      inputArr.push(" boop ");
     } else if (i.toString().includes("3")) {
-      inputArr.push("Won't you be my neighbor?");
+      inputArr.push(" Won't you be my neighbor? ");
     } else {
       inputArr.push(i);
     }
@@ -16,7 +16,7 @@ function input(num) {
 
 function hideResults () {
   document.getElementById("story").setAttribute("class" , "hidden");
-  document.getElementById("results").setAttribute("class" , "hidden");
+  const hide = document.getElementById("results").setAttribute("class" , "hidden");
   document.getElementById("robo-form").removeAttribute("class", "hidden");
   const inputNumber = document.getElementById("inputNum").value = null;
   let story = document.getElementById("story").value = null;

@@ -1,14 +1,14 @@
 function input(num) {
   let inputArr = [];
   for (let i= 0; i <= num; i++) {
-    if(num.toString().includes("1")) {
+    if(i.toString().includes("1")) {
       inputArr.push("beep");
-    } else if (num.toString().includes("2")) {
+    } else if (i.toString().includes("2")) {
       inputArr.push("boop");
-    } else if (num.toString().includes("3")) {
+    } else if (i.toString().includes("3")) {
       inputArr.push("Won't you be my neighbor?");
     } else {
-      return (" ");
+      inputArr.push(i);
     }
     }
     return inputArr;
@@ -16,14 +16,16 @@ function input(num) {
 
 function hideResults () {
   document.getElementById("story").setAttribute("class" , "hidden");
-  document.getElementById("reset").setAttribute("class" , "hidden");
   document.getElementById("results").setAttribute("class" , "hidden");
   document.getElementById("robo-form").removeAttribute("class", "hidden");
-  document.getElementById("inputNum").value = null;
+  const inputNumber = document.getElementById("inputNum").value = null;
+  let story = document.getElementById("story").value = null;
 }
 function handleForm(event) {
   event.preventDefault();
-  document.querySelector("input#inputNum");
+  let userInput = document.querySelector("input#inputNum").value;
+  let results = document.getElementById("results")
+  results.innerText = input(userInput)
   document.getElementById("story").setAttribute("class" , "hidden");
   document.getElementById("reset").setAttribute("class" , "hidden");
   document.getElementById("results").setAttribute("class" , "hidden");

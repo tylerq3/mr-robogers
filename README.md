@@ -4,6 +4,13 @@
 
 #### _{Program Chooser Quiz}_
 
+## Test 
+It should replace numbers containing '1' with 'Beep' code: input(1) Output [0, "Beep"]
+
+It should replace numbers containing '2' with 'Boop' code: input(2) Output [0, "Beep", "Boop"]
+
+It should replace numbers containing '3' with 'Boop' code: input(3) Output [0, "Beep", "Boop", "Won't you be my neighbor?"]
+
 ## Technologies Used
 
 * HTML
